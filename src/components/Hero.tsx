@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-scale-in">
             <a
-              href="https://drive.google.com/file/d/15mu8VPD0LIurfdJAbcMK73IGCuvQrBgb/view?usp=sharing"
+              href="https://drive.google.com/file/d/1nYHH368yNi8a8BsKntyLoX6v5TFvjinp/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-blue-500 via-purple-600 to-pink-600 hover:from-blue-600 hover:via-purple-700 hover:to-pink-700 px-8 py-3 rounded-full font-semibold flex items-center gap-2 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-2xl animate-glow"
