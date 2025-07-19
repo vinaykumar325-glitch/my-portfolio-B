@@ -12,19 +12,40 @@ const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Create mailto link with form data
-    const subject = encodeURIComponent(`Portfolio Contact: Message from ${formData.name}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    );
-    const mailtoLink = `mailto:chilamalavinaykumar@gmail.com?subject=${subject}&body=${body}`;
-    
-    // Open email client
-    window.location.href = mailtoLink;
-    
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
-    alert('Thank you for your message! Your email client will open to send the message.');
+    // Send email using EmailJS or similar service
+    // For now, we'll use a simple fetch to a contact endpoint
+    fetch('https://formspree.io/f/xpwzgkqr', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        _replyto: formData.email,
+        _subject: `Portfolio Contact: Message from ${formData.name}`,
+      }),
+    })
+    .then(response => {
+      if (response.ok) {
+        alert('Thank you for your message! I will get back to you soon.');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        throw new Error('Failed to send message');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      // Fallback to mailto
+      const subject = encodeURIComponent(`Portfolio Contact: Message from ${formData.name}`);
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      );
+      const mailtoLink = `mailto:chilamalavinaykumar@gmail.com?subject=${subject}&body=${body}`;
+      window.location.href = mailtoLink;
+      alert('Opening your email client to send the message.');
+    });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

@@ -22,15 +22,14 @@ const Hero: React.FC = () => {
           <div className="mb-8 flex justify-center">
             <div className="relative">
               <img
-                src="/Copy of 1723196809543.jpg"
+                src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400"
                 alt="Chilamala Vinay Kumar"
                 className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white shadow-2xl animate-float hover:scale-110 transition-transform duration-300"
               />
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 animate-pulse"></div>
             </div>
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-2xl animate-glow">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-2xl">
             Chilamala Vinay Kumar 
           </h1>
           <p className="text-xl md:text-2xl mb-4 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent font-semibold animate-slide-in-left">
