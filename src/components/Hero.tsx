@@ -18,7 +18,19 @@ const Hero: React.FC = () => {
 
       <div className="container mx-auto px-6 text-center z-10">
         <div className="animate-fade-in-up">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-rainbow bg-clip-text text-transparent animate-glow">
+          {/* Profile Picture */}
+          <div className="mb-8 flex justify-center">
+            <div className="relative">
+              <img
+                src="/Copy of 1723196809543.jpg"
+                alt="Chilamala Vinay Kumar"
+                className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white shadow-2xl animate-float hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 animate-pulse"></div>
+            </div>
+          </div>
+          
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-2xl animate-glow">
             Chilamala Vinay Kumar 
           </h1>
           <p className="text-xl md:text-2xl mb-4 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent font-semibold animate-slide-in-left">

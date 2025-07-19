@@ -5,7 +5,7 @@ const Skills: React.FC = () => {
   const skills: Skill[] = [
     {
       category: 'Languages',
-      skills: ['Python', 'Shell']
+      skills: ['Python', 'DSA in Python', 'Shell']
     },
     {
       category: 'DevOps Tools',
