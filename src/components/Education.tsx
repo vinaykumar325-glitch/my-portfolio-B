@@ -38,12 +38,12 @@ const EducationSection: React.FC = () => {
           {education.map((edu, index) => (
             <div
               key={edu.id}
-              className="bg-gradient-to-r from-emerald-100 via-teal-100 to-cyan-100 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-glow border-l-4 border-gradient-to-b from-emerald-500 to-cyan-500"
+              className="bg-gradient-to-r from-emerald-100 via-teal-100 to-cyan-100 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 animate-glow border-l-4 border-gradient-to-b from-emerald-500 to-cyan-500 animate-slide-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center">
-                  <GraduationCap className="text-emerald-600 mr-3 animate-float" size={24} />
+                  <GraduationCap className="text-emerald-600 mr-3 animate-wiggle" size={24} />
                   <h3 className="text-xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">{edu.degree}</h3>
                 </div>
                 <div className="flex items-center text-sm bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent font-semibold">
@@ -54,7 +54,7 @@ const EducationSection: React.FC = () => {
               
               <div className="flex items-center justify-between">
                 <p className="text-gray-600 font-medium">{edu.institution}</p>
-                <div className="bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-md hover:shadow-lg transition-shadow duration-200 animate-glow">
+                <div className="bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-md hover:shadow-lg transition-shadow duration-200 animate-pulse-glow">
                   CGPA: {edu.cgpa}
                 </div>
               </div>

@@ -57,7 +57,7 @@ const Skills: React.FC = () => {
           {skills.map((skillGroup, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-glow border-l-4 border-gradient-to-b"
+              className="bg-white rounded-lg p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 animate-glow border-l-4 border-gradient-to-b animate-flip-in"
               style={{
                 borderImage: `linear-gradient(to bottom, ${getSkillColor(skillGroup.category).split(' ')[1]}, ${getSkillColor(skillGroup.category).split(' ')[3]}) 1`,
                 animationDelay: `${index * 0.1}s`
@@ -70,7 +70,7 @@ const Skills: React.FC = () => {
                 {skillGroup.skills.map((skill, skillIndex) => (
                   <span
                     key={skillIndex}
-                    className={`px-3 py-1 bg-gradient-to-r ${getSkillColor(skillGroup.category)} text-white text-sm rounded-full font-medium hover:scale-110 transition-transform duration-200 shadow-md hover:shadow-lg animate-float`}
+                    className={`px-3 py-1 bg-gradient-to-r ${getSkillColor(skillGroup.category)} text-white text-sm rounded-full font-medium hover:scale-110 transition-transform duration-300 shadow-md hover:shadow-lg animate-pulse-glow`}
                     style={{ animationDelay: `${skillIndex * 0.1}s` }}
                   >
                     {skill}

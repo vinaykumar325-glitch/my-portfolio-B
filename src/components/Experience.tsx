@@ -31,7 +31,8 @@ const ExperienceSection: React.FC = () => {
           {experiences.map((exp, index) => (
             <div
               key={exp.id}
-              className="bg-gradient-to-br from-white via-cyan-50 to-blue-50 rounded-lg p-8 shadow-xl hover:shadow-2xl transition-all duration-300 mb-8 transform hover:scale-105 animate-glow border-l-4 border-gradient-to-b from-cyan-500 to-blue-500"
+              className="bg-gradient-to-br from-white via-cyan-50 to-blue-50 rounded-lg p-8 shadow-xl hover:shadow-2xl transition-all duration-500 mb-8 transform hover:scale-105 hover:-translate-y-2 animate-glow border-l-4 border-gradient-to-b from-cyan-500 to-blue-500 animate-slide-in-up"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                 <div>
@@ -42,7 +43,7 @@ const ExperienceSection: React.FC = () => {
                     {exp.company}
                     <span className="mx-2">•</span>
                     <span className="flex items-center">
-                      <MapPin size={16} className="mr-1 text-red-500 animate-float" />
+                      <MapPin size={16} className="mr-1 text-red-500 animate-ping-slow" />
                       {exp.location}
                     </span>
                   </div>
@@ -55,8 +56,12 @@ const ExperienceSection: React.FC = () => {
               
               <ul className="space-y-3 mb-6">
                 {exp.responsibilities.map((responsibility, respIndex) => (
-                  <li key={respIndex} className="flex items-start">
-                    <span className="text-purple-500 mr-3 font-bold animate-pulse">•</span>
+                  <li 
+                    key={respIndex} 
+                    className="flex items-start transform hover:translate-x-2 transition-transform duration-300"
+                    style={{ animationDelay: `${respIndex * 0.1}s` }}
+                  >
+                    <span className="text-purple-500 mr-3 font-bold animate-ping-slow">•</span>
                     <span className="text-gray-600">{responsibility}</span>
                   </li>
                 ))}
@@ -67,9 +72,9 @@ const ExperienceSection: React.FC = () => {
                   href={exp.certificateUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white px-6 py-2 rounded-full font-semibold flex items-center gap-2 hover:from-purple-600 hover:via-pink-600 hover:to-red-600 transition-all duration-300 transform hover:scale-110 w-fit shadow-lg hover:shadow-xl animate-glow"
+                  className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white px-6 py-2 rounded-full font-semibold flex items-center gap-2 hover:from-purple-600 hover:via-pink-600 hover:to-red-600 transition-all duration-300 transform hover:scale-110 w-fit shadow-lg hover:shadow-xl animate-pulse-glow"
                 >
-                  <ExternalLink size={18} className="animate-float" />
+                  <ExternalLink size={18} className="animate-bounce-slow" />
                   View Certificate
                 </a>
               )}

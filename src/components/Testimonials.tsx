@@ -26,10 +26,10 @@ const Testimonials: React.FC = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.id}
-              className="bg-gradient-to-br from-rose-100 via-pink-100 to-purple-100 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-glow border-l-4 border-gradient-to-b from-rose-500 to-purple-500"
+              className="bg-gradient-to-br from-rose-100 via-pink-100 to-purple-100 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 hover:rotate-1 animate-glow border-l-4 border-gradient-to-b from-rose-500 to-purple-500 animate-flip-in"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <Quote className="text-rose-600 mb-4 animate-float" size={32} />
+              <Quote className="text-rose-600 mb-4 animate-wiggle" size={32} />
               <p className="text-gray-600 text-lg mb-4 italic">
                 "{testimonial.quote}"
               </p>

@@ -64,7 +64,7 @@ const Contact: React.FC = () => {
         
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 animate-scale-in">
           {/* Contact Form */}
-          <div className="bg-gradient-to-br from-white via-indigo-50 to-purple-50 rounded-lg p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-glow border-l-4 border-gradient-to-b from-indigo-500 to-purple-500">
+          <div className="bg-gradient-to-br from-white via-indigo-50 to-purple-50 rounded-lg p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 animate-glow border-l-4 border-gradient-to-b from-indigo-500 to-purple-500 animate-slide-in-up">
             <h3 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-6">Send me a message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -114,24 +114,25 @@ const Contact: React.FC = () => {
               
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white py-3 px-6 rounded-lg font-semibold flex items-center justify-center gap-2 hover:from-purple-600 hover:via-pink-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl animate-glow"
+                className="w-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white py-3 px-6 rounded-lg font-semibold flex items-center justify-center gap-2 hover:from-purple-600 hover:via-pink-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl animate-pulse-glow"
               >
-                <Send size={20} className="animate-float" />
+                <Send size={20} className="animate-bounce-slow" />
                 Send Message
               </button>
             </form>
           </div>
           
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-8 animate-slide-in-right">
             <div>
               <h3 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-6">Contact Information</h3>
               <div className="space-y-4">
                 <a
                   href="mailto:chilamalavinaykumar@gmail.com"
-                  className="flex items-center p-4 bg-gradient-to-r from-white to-blue-50 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-glow border-l-4 border-blue-500"
+                  className="flex items-center p-4 bg-gradient-to-r from-white to-blue-50 rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 animate-glow border-l-4 border-blue-500 animate-slide-in-up"
+                  style={{ animationDelay: '0.1s' }}
                 >
-                  <Mail className="text-blue-600 mr-4 animate-float" size={24} />
+                  <Mail className="text-blue-600 mr-4 animate-wiggle" size={24} />
                   <div>
                     <p className="font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Email</p>
                     <p className="text-gray-600">chilamalavinaykumar@gmail.com</p>
@@ -140,9 +141,10 @@ const Contact: React.FC = () => {
                 
                 <a
                   href="tel:+917702184795"
-                  className="flex items-center p-4 bg-gradient-to-r from-white to-green-50 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-glow border-l-4 border-green-500"
+                  className="flex items-center p-4 bg-gradient-to-r from-white to-green-50 rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 animate-glow border-l-4 border-green-500 animate-slide-in-up"
+                  style={{ animationDelay: '0.2s' }}
                 >
-                  <Phone className="text-green-600 mr-4 animate-float" size={24} />
+                  <Phone className="text-green-600 mr-4 animate-bounce-slow" size={24} />
                   <div>
                     <p className="font-semibold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">Phone</p>
                     <p className="text-gray-600">+91-7702184795</p>
@@ -153,9 +155,10 @@ const Contact: React.FC = () => {
                   href="https://linkedin.com/in/chilamala-vinay-kumar-616a99280"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center p-4 bg-gradient-to-r from-white to-blue-50 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-glow border-l-4 border-blue-600"
+                  className="flex items-center p-4 bg-gradient-to-r from-white to-blue-50 rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 animate-glow border-l-4 border-blue-600 animate-slide-in-up"
+                  style={{ animationDelay: '0.3s' }}
                 >
-                  <Linkedin className="text-blue-600 mr-4 animate-float" size={24} />
+                  <Linkedin className="text-blue-600 mr-4 animate-spin-slow" size={24} />
                   <div>
                     <p className="font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">LinkedIn</p>
                     <p className="text-gray-600">chilamala-vinay-kumar</p>
@@ -166,9 +169,10 @@ const Contact: React.FC = () => {
                   href="https://github.com/vinaykumar325-glitch"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center p-4 bg-gradient-to-r from-white to-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-glow border-l-4 border-gray-800"
+                  className="flex items-center p-4 bg-gradient-to-r from-white to-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 animate-glow border-l-4 border-gray-800 animate-slide-in-up"
+                  style={{ animationDelay: '0.4s' }}
                 >
-                  <Github className="text-gray-800 mr-4 animate-float" size={24} />
+                  <Github className="text-gray-800 mr-4 animate-ping-slow" size={24} />
                   <div>
                     <p className="font-semibold bg-gradient-to-r from-gray-800 to-purple-600 bg-clip-text text-transparent">GitHub</p>
                     <p className="text-gray-600">vinaykumar325-glitch</p>

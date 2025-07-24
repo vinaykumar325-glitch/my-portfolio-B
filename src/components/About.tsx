@@ -11,7 +11,7 @@ const About: React.FC = () => {
           </h2>
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="animate-slide-in-left">
+            <div className="animate-slide-in-left hover:animate-zoom-in">
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
                 I'm <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent font-bold"> C Vinay Kumar</span>, Btech 2024 Graduate in the stream of Mechanical Engineering at Gates Institute of Technology, passionate about building scalable, automated infrastructure, Developing Apps and Websites.
               </p>
@@ -26,23 +26,23 @@ const About: React.FC = () => {
             <div className="space-y-6 animate-slide-in-right">
               <div className="bg-gradient-to-r from-blue-100 to-purple-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-glow">
                 <div className="flex items-center mb-3">
-                  <Code className="text-blue-600 mr-3 animate-float" size={24} />
+                  <Code className="text-blue-600 mr-3 animate-wiggle" size={24} />
                   <h3 className="text-xl font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Development</h3>
                 </div>
                 <p className="text-gray-600">Python expertise with focus on automation and microservices</p>
               </div>
               
-              <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-glow">
+              <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 hover:rotate-1 animate-glow">
                 <div className="flex items-center mb-3">
-                  <Wrench className="text-purple-600 mr-3 animate-float" size={24} />
+                  <Wrench className="text-purple-600 mr-3 animate-spin-slow" size={24} />
                   <h3 className="text-xl font-semibold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">DevOps</h3>
                 </div>
                 <p className="text-gray-600">CI/CD pipelines, containerization, and infrastructure automation</p>
               </div>
               
-              <div className="bg-gradient-to-r from-cyan-100 to-blue-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-glow">
+              <div className="bg-gradient-to-r from-cyan-100 to-blue-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 hover:-rotate-1 animate-glow">
                 <div className="flex items-center mb-3">
-                  <Cloud className="text-cyan-600 mr-3 animate-float" size={24} />
+                  <Cloud className="text-cyan-600 mr-3 animate-bounce-slow" size={24} />
                   <h3 className="text-xl font-semibold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">Cloud</h3>
                 </div>
                 <p className="text-gray-600">AWS and GCP platforms with infrastructure as code</p>

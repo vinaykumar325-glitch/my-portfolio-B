@@ -42,7 +42,7 @@ const Projects: React.FC = () => {
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className="bg-gradient-to-br from-white via-purple-50 to-pink-50 rounded-lg p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-4 hover:scale-105 animate-glow border-2 border-gradient-to-r from-purple-200 to-pink-200"
+              className="bg-gradient-to-br from-white via-purple-50 to-pink-50 rounded-lg p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 hover:rotate-1 animate-glow border-2 border-gradient-to-r from-purple-200 to-pink-200 animate-zoom-in"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="flex items-center justify-between mb-4">
@@ -91,9 +91,9 @@ const Projects: React.FC = () => {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gradient-to-r from-gray-800 via-purple-800 to-pink-800 text-white px-6 py-2 rounded-full font-semibold flex items-center gap-2 hover:from-gray-700 hover:via-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl animate-glow"
+                    className="bg-gradient-to-r from-gray-800 via-purple-800 to-pink-800 text-white px-6 py-2 rounded-full font-semibold flex items-center gap-2 hover:from-gray-700 hover:via-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl animate-pulse-glow"
                   >
-                    <Github size={18} className="animate-float" />
+                    <Github size={18} className="animate-spin-slow" />
                     View Code
                   </a>
                 </div>
